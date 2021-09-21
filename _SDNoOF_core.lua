@@ -36,7 +36,7 @@ local lastExecutedFrame = 0
 shared = {
     consoleOut = "",
     version = "EN_US",
-    enabled = true,
+    enabled = false,
     frame = 0
 }
 
