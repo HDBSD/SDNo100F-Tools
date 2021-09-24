@@ -56,25 +56,20 @@ local igMappings = {
     RIGHT = {19}
 }
 
---[[
-    
-look into if the below is needed, it appears that bit 5 and 6 can get swapped on the main menu
-
-local igMappings = {
-    A = 8,
-    B = 6,
-    X = 7,
-    Y = 5,
-    Z = 4,
-    RT = [11,12],
-    LT = [16,15],
-    START = 24,
-    UP = 20,
-    DOWN = 18,
-    LEFT = 17,
-    RIGHT = 19
+local imMappings = {
+    A = {8},
+    B = {6},
+    X = {7},
+    Y = {5},
+    Z = {4},
+    RT = {11,12},
+    LT = {16,15},
+    START = {24},
+    UP = {20},
+    DOWN = {18},
+    LEFT = {17},
+    RIGHT = {19}
 }
-]]--
 
 
 --Reads inputs and places them into gameinputs table
@@ -82,7 +77,13 @@ local igMappings = {
 local function processInputs()
     inputBytes = toBits(ReadValue32(0x80200035), 32)
     
-    for k,v in pairs(igMappings) do
+    if string.lower(ReadValueString(0x805C06EC, 4)) == "mnu3" then
+        Mappings = imMappings
+    else
+        Mappings = igMappings
+    end
+
+    for k,v in pairs(Mappings) do
         
         if v[2] ~= nill and (inputBytes[v[1]] == 1 or inputBytes[v[2]] == 1) then
             gameInputs[k] = 1
