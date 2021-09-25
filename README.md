@@ -40,7 +40,7 @@ Once the game has been started the script will automatically load, you can then 
 | Control | Action | Notes |
 |--|--| -- |
 | Z+X+RIGHT | Enable/Disable the menu |  |
-| Z+RT+LT+X+Y | Input Viewer | Shows Digital input on the left of the screen |
+| LT+X+Y | Input Viewer | Shows Digital input on the left of the screen |
 | Z+Y+LT | Show HIP File Selector | UP/Down=increment/decrement 1 place respectively<br> Right/Left=increment/decrement 10 place respectively<br>A/Start=Select level<br>B=Cancel selection |
 | X+Y+Z | Show Powerup Menu | UP/Down=Navigate up and down menu<br>Left/Right=Toggle Powerup<br>A=Confirm Selection<br>B=Cancel Selection |
 | A+X+Z | Show POS | Rounded to Places |
