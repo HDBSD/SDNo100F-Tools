@@ -59,7 +59,7 @@ function onScriptStart()
 
     -- Main Actions
 
-    inputSystem.registerAction("Z+RT+LT+X+Y", {name="InputDisplay", method=inputSystem.inputViewer, type="Toggle"})
+    inputSystem.registerAction("LT+X+Y", {name="InputDisplay", method=inputSystem.inputViewer, type="Toggle"})
     inputSystem.registerAction("A+X+Z", {name="ShowPOS", method=posSystem.showPos, type="Toggle"})
     inputSystem.registerAction("A+X+RT", {name="LockZPOS", method=posSystem.lockZ, type="Toggle"})
 
